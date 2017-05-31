@@ -98,7 +98,9 @@
  * @param                {Number}                设置光标与输入框保持的距离(默认0)
  * @param                {Number}                设置最大高度(可选)
  */
+  
 ```javascript
+
 var autoTextarea = function (elem, extra, maxHeight) {
         extra = extra || 0;
         var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
