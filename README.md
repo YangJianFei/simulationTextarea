@@ -3,6 +3,15 @@
 ## 1.div+css
 
 ### css
+···
+    /*placeholdeer*/
+    textarea:empty:before{
+        content: attr(placeholder);
+        color:#bbb;
+    }
+    textarea:focus:before{
+        content:none;
+    }
     .textarea {
 
         width: 400px;
@@ -40,15 +49,18 @@
         box-shadow: inset 0 1px 3px rgba(0,0,0,0.1),0 0 8px rgba(82,168,236,0.6);
 
     }
-    ### html
-    <div class="textarea" contenteditable="true"><br /></div>
-    CSS代码中，因为IE6不支持min/max，所以做了hack，其他的也好理解。
+    ···
+    ### html
+    ···
+    <div class="textarea" contenteditable="true"><br /></div>
+    ···
+    CSS代码中，因为IE6不支持min/max，所以做了hack，其他的也好理解。
     
 ## js+textarea
 
 ### css
-
-    #textarea {
+···
+    #textarea {
 
         display: block;
 
@@ -76,8 +88,8 @@
 
         box-shadow: inset 0 1px 3px rgba(0,0,0,0.1),0 0 8px rgba(82,168,236,0.6);
 
-    }
-
+    }
+···
 ### js
 
 /**
@@ -86,6 +98,7 @@
  * @param                {Number}                设置光标与输入框保持的距离(默认0)
  * @param                {Number}                设置最大高度(可选)
  */
+ ···
 var autoTextarea = function (elem, extra, maxHeight) {
         extra = extra || 0;
         var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
@@ -148,9 +161,9 @@ var autoTextarea = function (elem, extra, maxHeight) {
         addEvent('focus', change);
         change();
 };
-
+···
 ### html
-
+···
 <textarea
 id="textarea"
 placeholder="回复内容"></textarea>
@@ -161,4 +174,5 @@ placeholder="回复内容"></textarea>
 
         autoTextarea(text);// 调用
 
-    </script>
+    </script>
+···
